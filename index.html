@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B5C63">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="سوقنا">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>سوقنا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="hero bleed">
+    <div class="wrap">
+      <div class="hero-top">
+        <h1 class="brand">سوقنا</h1>
+        <div class="me" id="me"></div>
+        <div class="langs" id="langs" role="group" aria-label="Language / زمان / اللغة"></div>
+      </div>
+      <p class="tag" data-i18n="tag">سجّل حسابك، اعرض بضاعتك بسعرك، ويتواصل معك الزبون مباشرة.</p>
+      <div class="hero-actions">
+        <button class="btn accent" id="sell" type="button" data-i18n="sell">بيع بضاعتك</button>
+        <button class="btn ghost" id="install" type="button" data-i18n="install" hidden>ثبّت التطبيق</button>
+        <span class="stats" id="stats" aria-live="polite"></span>
+      </div>
+    </div>
+  </header>
+  <div class="strip bleed" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="alerts" id="alerts" hidden aria-live="polite"></section>
+    <section class="promo-bar" id="promo" hidden></section>
+    <section class="toolbar" aria-label="البحث والتصنيف" data-i18n-aria="toolbar_aria">
+      <div class="row">
+        <input id="q" class="search" type="search" placeholder="ابحث عن بضاعة أو بائع" data-i18n-ph="search_ph" aria-label="بحث" data-i18n-aria="search_aria">
+        <div class="tabs" role="tablist" id="tabs"></div>
+      </div>
+      <div class="chips" id="chips" aria-label="التصنيفات" data-i18n-aria="cats_aria"></div>
+    </section>
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <div class="more-wrap" id="more"></div>
+  </main>
+
+  <footer class="wrap foot"><a href="/terms.html" data-i18n="terms_link">الشروط وسياسة الخصوصية</a> · <a href="/admin.html">دخول المدير</a></footer>
+
+  <div id="modal-root"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/i18n.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

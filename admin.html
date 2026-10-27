@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B5C63">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="سوقنا">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="robots" content="noindex">
+<title>لوحة تحكم سوقنا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="hero bleed">
+    <div class="wrap">
+      <div class="hero-top">
+        <h1 class="brand">لوحة التحكم</h1>
+        <a class="btn ghost sm" href="/">العودة للموقع</a>
+      </div>
+      <p class="stats" id="stats" aria-live="polite"></p>
+    </div>
+  </header>
+  <div class="strip bleed" aria-hidden="true"></div>
+  <main class="wrap">
+    <div id="gate" class="empty" hidden></div>
+    <div id="panel" hidden>
+      <section class="tiles" id="tiles" aria-label="الإحصاء"></section>
+      <section class="namebox" id="names" aria-label="أسماء البائعين"></section>
+      <section class="toolbar">
+        <div class="row">
+          <input id="q" class="search" type="search" placeholder="ابحث بالاسم أو الإيميل أو الرقم" aria-label="بحث">
+          <div class="tabs" role="tablist" id="tabs"></div>
+        </div>
+      </section>
+      <section class="alist" id="list" aria-live="polite"></section>
+      <div class="more-wrap" id="more"></div>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/admin.js"></script>
+</body>
+</html>
